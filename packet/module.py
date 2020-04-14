@@ -1,6 +1,9 @@
 import math
 
 
+# функция выводит самый большой делитель (не обязательно простой) числа.
+
+
 def num_div_max(n):
     max_div = 1
     for i in range(n - 1, 1, -1):
@@ -8,6 +11,8 @@ def num_div_max(n):
             if max_div < i:
                 max_div = i
     print(max_div)
+
+# функция выводит каноническое разложение числа на простые множители;
 
 
 def num_divs_canon(n):
@@ -21,11 +26,17 @@ def num_divs_canon(n):
             i += 1
     divs.append(int(n))
     canon_divs = []
+    temp = 0
     for i in divs:
+        if i == temp:
+            continue
         canon_divs.append(i)
         canon_divs.append('^')
         canon_divs.append(divs.count(i))
+        temp = i
     print(canon_divs)
+
+# выводит самый большой простой делитель числа.
 
 
 def num_div_max_simple(n):
@@ -46,6 +57,8 @@ def num_div_max_simple(n):
             max = temp
     print(max)
 
+# выводит список всех делителей числа;
+
 
 def num_divs(n):
     divs = [1]
@@ -58,6 +71,8 @@ def num_divs(n):
             i += 1
     divs.append(int(n))
     print(divs)
+
+# проверка числа на простоту (простые числа - это те числа у которых делители единица и они сами);
 
 
 def num_simple(n):
