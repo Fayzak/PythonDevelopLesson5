@@ -33,7 +33,8 @@ def num_divs_canon(n):
         canon_divs.append(i)
         canon_divs.append('^')
         canon_divs.append(divs.count(i))
-        temp = i
+        canon_divs.append('+')
+    del canon_divs[-1]
     print(canon_divs)
 
 # выводит самый большой простой делитель числа.
