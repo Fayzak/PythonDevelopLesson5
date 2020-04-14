@@ -34,6 +34,7 @@ def num_divs_canon(n):
         canon_divs.append('^')
         canon_divs.append(divs.count(i))
         canon_divs.append('+')
+        temp = i
     del canon_divs[-1]
     print(canon_divs)
 
